@@ -37,6 +37,8 @@ func main()  {
 	//pointer()
 
 	//simplePointer()
+
+	//sliceProblem()
 }
 
 //簡單struct
@@ -179,4 +181,19 @@ type Api struct {
 		ExecutionTime int    `json:"execution_time"`
 		ServerName    string `json:"server_name"`
 	} `json:"profile"`
+}
+
+func sliceProblem()  {
+	s0 := []int{1, 2, 3, 4}
+	s1 := s0[:2]
+	s2 := append(s1, 5)
+	s3 := append(s1, 6, 7)
+	s4 := append(s1, 8, 9, 0)
+
+	fmt.Println("-End-")
+	fmt.Printf("%p %+v \n", s0, s0)
+	fmt.Printf("%p %+v \n", s1, s1)
+	fmt.Printf("%p %+v \n", s2, s2)
+	fmt.Printf("%p %+v \n", s3, s3)
+	fmt.Printf("%p %+v \n", s4, s4)
 }
